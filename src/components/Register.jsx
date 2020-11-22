@@ -10,7 +10,7 @@ function Register()
     initialValues={{fullname:"", username: "", password: "" ,confirm_password:""}}
     onSubmit={(values, { setSubmitting }) => {
       setTimeout(() => {
-        axios.post("https://damp-woodland-99459.herokuapp.com/register",values)
+        axios.post("https://radiant-reaches-85700.herokuapp.com/register",values)
         .then(response=>{
             console.log("added")
             window.location.replace("/login");

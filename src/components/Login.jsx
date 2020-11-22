@@ -20,7 +20,7 @@ function Login()
             onSubmit={(values,{ setSubmitting })=>{
                 
                 setTimeout(()=>{
-                    axios.post("https://damp-woodland-99459.herokuapp.com/login",values)
+                    axios.post("https://radiant-reaches-85700.herokuapp.com/login",values)
                     .then(response=>{
                     if(response.data!=="wrong password" && response.data !=="not found")
                     {
@@ -141,7 +141,7 @@ function Login()
 //             username:"",
 //             password:""
 //         });
-        // axios.post("https://damp-woodland-99459.herokuapp.com/login",user)
+        // axios.post("https://radiant-reaches-85700.herokuapp.com/login",user)
         // .then(response=>{
         //     //console.log("logged in");
         //     if(response.data!=="wrong password" && response.data !=="not found")
