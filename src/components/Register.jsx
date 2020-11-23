@@ -3,8 +3,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 function Register()
-{
-  
+{ 
   return(  
   <Formik
     initialValues={{fullname:"", username: "", password: "" ,confirm_password:""}}
@@ -12,8 +11,15 @@ function Register()
       setTimeout(() => {
         axios.post("https://radiant-reaches-85700.herokuapp.com/register",values)
         .then(response=>{
-            console.log("added")
-            window.location.replace("/login");
+            if(response.data!="already exist")
+            {
+              console.log("added")
+              window.location.replace("/login");
+            }
+            else
+            {
+              window.location.replace("/userexist");
+            }
             });
         setSubmitting(false);
       }, 500);
@@ -102,6 +108,7 @@ function Register()
                                 {errors.password && touched.password && (
                                     <div className="input-feedback">{errors.password}</div>
                                 )}
+                                <div className="input-feedback">password must contain atleast 8 characters having atleast 1 digit</div>
                                 <div className="form-group">
                                     <label htmlFor="confirm_password">Confirm Password</label>
                                     <input

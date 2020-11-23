@@ -5,7 +5,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import Keeper from "./components/keeper/Keeper";
 import OOP from "./components/keeper/OOP";
-
+import UserExist from "./components/UserExist";
 const idContext=createContext();
 
 function App(){
@@ -19,7 +19,8 @@ function App(){
       <Route exact path="/register" component={Register} />
       <Route exact path="/keeper" render={()=>
        id!==null ? <Keeper /> : <OOP />
-      } />
+       } />
+      <Route exact path="/userexist" component={UserExist} /> 
     </Switch>
     </idContext.Provider>
     </>

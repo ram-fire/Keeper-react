@@ -90,6 +90,7 @@ function Login()
                                     {errors.password && touched.password && (
                                         <div className="input-feedback">{errors.password}</div>
                                     )}
+                                    <div className="input-feedback">password must contain atleast 8 characters having atleast 1 digit</div>
                                     <button onClick={handleSubmit} className="btn btn-dark" disabled={!props.isValid || isSubmitting}> login </button>
                                 </form>
                         </div>
