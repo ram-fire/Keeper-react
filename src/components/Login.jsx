@@ -63,7 +63,7 @@ function Login()
                                         <input
                                             name="username"
                                             type="text"
-                                            placeholder="Enter your username"
+                                            placeholder="Enter your username (email)"
                                             value={values.username}
                                             onChange={handleChange}
                                             onBlur={handleBlur}

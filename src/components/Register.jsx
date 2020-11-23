@@ -81,7 +81,7 @@ function Register()
                                     <input
                                         name="username"
                                         type="text"
-                                        placeholder="Enter your username"
+                                        placeholder="Enter your email"
                                         value={values.username}
                                         onChange={handleChange}
                                         onBlur={handleBlur}
